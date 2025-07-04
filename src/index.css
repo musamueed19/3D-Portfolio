@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+html,
+body {
+  width: 100vw;
+  background-color: black;
+  color: white;
+}
+
+/* custom font, styles, and colors - defination in @theme (no need to define them tailwind.config.js) */
+@theme {
+  --color-white-50: #d9ecff;
+  --color-blue-100: #2d2d38;
+}
+
+/* add custom utlity classes using tailwind @layer feature */
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+}
