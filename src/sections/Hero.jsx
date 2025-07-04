@@ -1,5 +1,6 @@
 import React from "react";
 import { words } from "../constants/Constants";
+import Button from "../components/Button";
 
 const Hero = () => {
   return (
@@ -20,9 +21,9 @@ const Hero = () => {
                 Shaping
                 <span className="slide">
                   <span className="wrapper">
-                    {words.map(({ text, src }) => (
+                    {words.map(({ text, src }, index) => (
                       <span
-                        key={text}
+                        key={index}
                         className="flex items-center md:gap-3 gap-1 pb-2"
                       >
                         <img
@@ -40,7 +41,6 @@ const Hero = () => {
               <h1>that Deliver Results</h1>
             </div>
             <p className="text-white-50 md:text-xl z-10 relative pointer-events-none">
-              Hi 👋🏻
               {/* <img
                 alt="wave emoji"
                 loading="lazy"
@@ -48,9 +48,12 @@ const Hero = () => {
                 height="50"
                 src="https://musamueed.vercel.app/wave.svg"
               /> */}
-              , I'm Muhammad Musa Mueed, Full Stack Developer with passion to
-              learn, create, and deploy
+              Hi 👋🏻, I'm Muhammad Musa Mueed, Full Stack Developer with passion
+              to learn, create, and deploy
             </p>
+
+            {/* Explore Button */}
+            <Button href="#home" className={'md:w-80 md:h-16 w-60 h-12'} id="button" >See my Work</Button>
           </div>
         </header>
 
