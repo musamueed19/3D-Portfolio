@@ -1,6 +1,7 @@
 import React from "react";
 import { words } from "../constants/Constants";
 import Button from "../components/Button";
+import HeroExperience from "../components/HeroModels/HeroExperience";
 
 const Hero = () => {
   return (
@@ -40,7 +41,7 @@ const Hero = () => {
               <h1>into Real Projects</h1>
               <h1>that Deliver Results</h1>
             </div>
-            <p className="text-white-50 md:text-xl z-10 relative pointer-events-none">
+            <p className="text-white-50 md:text-xl z-10 relative pointer-events-none lg:max-w-[50%] xl:max-w-[45%]">
               {/* <img
                 alt="wave emoji"
                 loading="lazy"
@@ -58,6 +59,11 @@ const Hero = () => {
         </header>
 
         {/* RIGHT: 3D MODEL */}
+        <figure>
+          <div className="hero-3d-layout">
+            <HeroExperience />
+          </div>
+        </figure>
       </div>
     </section>
   );
